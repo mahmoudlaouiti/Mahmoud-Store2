@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="signupForm" onsubmit="register(event)">
+            <h2>Sign Up</h2>
+            <div class="input-container">
+                <input type="text" id="fullName" placeholder="Full Name" oninput="checkProfanity(event); limitFullNameInput(event)" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <div class="error-message" id="signupError"></div>
+            <p><a href="Home.html" id="Return">Return</a></p>
+        </form>
+    </div>
+
+    <script>
+        // Function to limit full name input length (optional max length)
+        function limitFullNameInput(event) {
+            const input = event.target;
+            const maxLength = 8; // Set maximum length for the full name input
+            if (input.value.length > maxLength) {
+                input.value = input.value.slice(0, maxLength); // Trim input
+            }
+        }
+
+        // Function to check for profanity using an external service
+        function checkProfanity(event) {
+            const input = event.target;
+            const inputText = input.value;
+
+            // Make a call to Purgomalum API to check for profanity
+            fetch(`https://www.purgomalum.com/service/containsprofanity?text=${encodeURIComponent(inputText)}`)
+                .then(response => response.text())
+                .then(data => {
+                    const errorMessageElement = document.getElementById('signupError');
+
+                    if (data === "true") {
+                        input.value = ""; // Clear input field if bad words are detected
+                        errorMessageElement.textContent = "Please remove offensive language."; // Show error message
+                        errorMessageElement.style.color = 'red';
+                    } else {
+                        errorMessageElement.textContent = ""; // Clear error message when no bad words are detected
+                    }
+                })
+                .catch(error => console.error('Error checking for profanity:', error));
+        }
+
+        // Function to handle the sign-up process
+        function register(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get the full name from the input field
+            const fullName = document.getElementById('fullName').value;
+
+            // If no full name is entered, show an error message
+            if (!fullName) {
+                alert("Please enter your full name.");
+                return;
+            }
+
+            // Store the full name in localStorage
+            localStorage.setItem('userName', fullName);
+
+            // Redirect to the Home.html page
+            window.location.href = "Home.html";
+        }
+    </script>
+</body>
+</html>

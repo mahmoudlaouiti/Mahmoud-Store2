@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff6347;
+}
+
+a {
+  text-decoration: none;
+  color: #ff6347;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Icon styling */
+.icon {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 20px;
+  color: #ccc;
+}
+
+input[type="text"], input[type="password"] {
+  padding-left: 40px;  /* Add space for the icon inside input field */
+}
+
+/* Make icons and input larger */
+input, button {
+  font-size: 18px;
+}
+
+.icon i {
+  font-size: 22px;  /* Bigger icons */
+}
+#Return {
+  display: block; /* Make the anchor element a block element to apply centering */
+  text-align: center; /* Center text inside the anchor */
+  margin: 0 auto; /* Apply automatic margin to center horizontally */
+  text-decoration: none; /* Optional: Remove underline from the link */
+}
+
+

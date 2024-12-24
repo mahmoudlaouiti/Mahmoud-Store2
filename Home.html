@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Comp.css">
+  <title>Mahmoud Store</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="Home.html">Mahmoud Store</a></div>
+    <div class="search-bar">
+      <input type="text" id="productSearch" placeholder="Search for products...">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Home.html#products">Shop</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="About.html">More</a></li>
+    </ul>
+    <div class="cart-account">
+      <a href="Cart.html" class="cart-icon"><span class="cart-count">0</span> 🛒</a>
+      <a href="Signup.html" class="account-link">Account</a>
+<!-- Display User Name Here -->
+<span id="userNameDisplay">Guest</span>
+</div>
+
+
+</nav>
+
+</body>
+</html>
+
+<!-- Products Section -->
+<div id="cart-items-container">
+  <div id="products" class="products-container">
+    <h1>All Products</h1>
+    <div class="products-grid" id="productList">
+      <div class="scroll-wrapper">
+        <div class="scroll-container">
+          <div class="products-grid">
+            <!-- Add all product items here -->
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop1.png" alt="Asus Laptop 1">
+                <h3>ASUS Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop2.png" alt="Asus Laptop 2">
+                <h3>ASUS Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop3.png" alt="Asus Laptop 3">
+                <h3>ASUS Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Samsung Galaxy A25.png" alt="Samsung Galaxy A25">
+                <h3>Samsung Galaxy A25</h3>
+                <p>$230</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Samsung Galaxy A25', 230)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Samsung Galaxy A25 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Samsung Galaxy A15.png" alt="Samsung Galaxy A15">
+                <h3>Samsung Galaxy A15</h3>
+                <p>$210</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Samsung Galaxy A15', 210)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Samsung Galaxy A15 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Samsung Galaxy A05.png" alt="Samsung Galaxy A05">
+                <h3>Samsung Galaxy A05</h3>
+                <p>$199</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Samsung Galaxy A05', 199)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Samsung Galaxy A05 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Headphones1.png" alt="Headphones 1">
+                <h3>Headphones</h3>
+                <p>$50</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Headphones', 50)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Headphones suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Headphones2.png" alt="Headphones 2">
+                <h3>Headphones</h3>
+                <p>$50</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Headphones', 50)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Headphones suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Headphones3.png" alt="Headphones 3">
+                <h3>Headphones</h3>
+                <p>$50</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Headphones', 50)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Headphones suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Playstation5.png" alt="Playstation 5">
+                <h3>Playstation 5</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Playstation 5', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Playstation 5 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Playstation4.png" alt="Playstation 4">
+                <h3>Playstation 4</h3>
+                <p>$400</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Playstation 4', 400)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Playstation 4 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Playstation3.png" alt="Playstation 3">
+                <h3>Playstation 3</h3>
+                <p>$300</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Playstation 3', 300)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Playstation 3 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MacBook1.png" alt="Samsung Galaxy A25">
+                <h3>MacBook</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MacBook', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MacBook Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MacBook2.png" alt="Samsung Galaxy A15">
+                <h3>MacBook</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MacBook', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MacBook laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MacBook3.png" alt="Samsung Galaxy A05">
+                <h3>MacBook</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MacBook', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MacBook laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Lenovo Laptop1.png" alt="Headphones 1">
+                <h3>Lenovo Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Lenovo Laptop', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Lenovo Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Lenovo Laptop2.png" alt="Headphones 2">
+                <h3>Lenovo Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Lenovo Laptop', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Lenovo Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Lenovo Laptop3.png" alt="Headphones 3">
+                <h3>Lenovo Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Lenovo Laptop', 250)">Add to
+                    Cart</button></a></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Lenovo Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MSI Laptop1.png" alt="Playstation 5">
+                <h3>MSI Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Lenovo Laptop', 500)">Add to
+                    Cart</button></a></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MSI Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MSI Laptop2.png" alt="Playstation 5">
+                <h3>MSI Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MSI Laptop', 500)">Add to
+                    Cart</button></a></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MSI Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MSI Laptop3.png" alt="Playstation 5">
+                <h3>MSI Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MSI Laptop', 500)">Add to
+                    Cart</button></a></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MSI Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Another Products Section -->
+    <div class="products-container">
+      <h1>Best Products</h1>
+      <div class="scroll-wrapper">
+        <div class="scroll-container">
+          <div class="products-grid">
+            <!-- Add all product items here -->
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop1.png" alt="Asus Laptop 1">
+                <h3>ASUS Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop2.png" alt="Asus Laptop 2">
+                <h3>ASUS Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop3.png" alt="Asus Laptop 3">
+                <h3>ASUS Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Samsung Galaxy A25.png" alt="Samsung Galaxy A25">
+                <h3>Samsung Galaxy A25</h3>
+                <p>$230</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Samsung Galaxy A25', 230)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Samsung Galaxy A25 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Samsung Galaxy A15.png" alt="Samsung Galaxy A15">
+                <h3>Samsung Galaxy A15</h3>
+                <p>$210</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Samsung Galaxy A15', 210)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Samsung Galaxy A15 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Samsung Galaxy A05.png" alt="Samsung Galaxy A05">
+                <h3>Samsung Galaxy A05</h3>
+                <p>$199</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Samsung Galaxy A05', 199)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Samsung Galaxy A05 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Headphones1.png" alt="Headphones 1">
+                <h3>Headphones</h3>
+                <p>$50</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Headphones', 50)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Headphones suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Headphones2.png" alt="Headphones 2">
+                <h3>Headphones</h3>
+                <p>$50</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Headphones', 50)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Headphones suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Headphones3.png" alt="Headphones 3">
+                <h3>Headphones</h3>
+                <p>$50</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Headphones', 50)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Headphones suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Playstation5.png" alt="Playstation 5">
+                <h3>Playstation 5</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Playstation 5', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Playstation 5 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Playstation4.png" alt="Playstation 4">
+                <h3>Playstation 4</h3>
+                <p>$400</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Playstation 4', 400)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Playstation 4 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Playstation3.png" alt="Playstation 3">
+                <h3>Playstation 3</h3>
+                <p>$300</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Playstation 3', 300)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Playstation 3 suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Another Products Section -->
+    <div class="products-container">
+      <h1>Laptops</h1>
+      <div class="scroll-wrapper">
+        <div class="scroll-container">
+          <div class="products-grid">
+            <!-- Add all product items here -->
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop1.png" alt="Asus Laptop 1">
+                <h3>ASUS Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop2.png" alt="Asus Laptop 2">
+                <h3>ASUS Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/ASUS Laptop3.png" alt="Asus Laptop 3">
+                <h3>ASUS Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('ASUS Laptop', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance ASUS Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MacBook1.png" alt="Samsung Galaxy A25">
+                <h3>MacBook</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MacBook', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MacBook Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MacBook2.png" alt="Samsung Galaxy A15">
+                <h3>MacBook</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MacBook', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MacBook laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MacBook3.png" alt="Samsung Galaxy A05">
+                <h3>MacBook</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MacBook', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MacBook laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Lenovo Laptop1.png" alt="Headphones 1">
+                <h3>Lenovo Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Lenovo Laptop', 250)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Lenovo Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Lenovo Laptop2.png" alt="Headphones 2">
+                <h3>Lenovo Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Lenovo Laptop', 500)">Add to
+                    Cart</button></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Lenovo Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/Lenovo Laptop3.png" alt="Headphones 3">
+                <h3>Lenovo Laptop</h3>
+                <p>$250</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Lenovo Laptop', 250)">Add to
+                    Cart</button></a></a>
+                <div class="hover-info">
+                  <p>This is a high-performance Lenovo Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MSI Laptop1.png" alt="Playstation 5">
+                <h3>MSI Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('Lenovo Laptop', 500)">Add to
+                    Cart</button></a></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MSI Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MSI Laptop2.png" alt="Playstation 5">
+                <h3>MSI Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MSI Laptop', 500)">Add to
+                    Cart</button></a></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MSI Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-wrapper">
+              <div class="product-item">
+                <img src="images/MSI Laptop3.png" alt="Playstation 5">
+                <h3>MSI Laptop</h3>
+                <p>$500</p>
+                <a href="Cart.html"><button class="add-to-cart" onclick="addToCart('MSI Laptop', 500)">Add to
+                    Cart</button></a></a>
+                <div class="hover-info">
+                  <p>This is a high-performance MSI Laptop suitable for gaming and productivity!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="Home.js"></script>
+
+    </body>
+
+    </html>
